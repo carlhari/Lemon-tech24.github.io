@@ -1,0 +1,45 @@
+@media screen and (max-width:365px){
+    .pic1{
+        background-size: 100% 70%;
+        padding-bottom:90px;
+    }
+
+    .pic2{
+        background-size: 100% 80%;
+        padding-top:150px;
+        padding-bottom:50px;
+    }
+    .content1{
+        margin-top:0px;
+        font-size:15px;
+        background:red;
+    }
+    .content2{
+        padding-top:-90px;
+        font-size:10px;
+        background:red;
+    }
+}
+
+@media screen and (max-width:478px){
+    .pic1{
+        background-size:contain, cover;
+        position:static;
+        padding-top:0px;
+        padding-bottom:130px;
+
+    }
+
+    .pic2{
+
+        padding-top:150px;
+        padding-bottom:50px;
+        position:static;
+    }
+    .content1{
+        font-size:10px;
+    }
+    .content2{
+        font-size:10px;
+    }
+}
