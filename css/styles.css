@@ -1,9 +1,13 @@
 html{
+
+
     margin:0;
     padding:0;
     overflow-x:hidden;
 }
+
 *{
+
     box-sizing: border-box;
     font-family: Helvetica, sans-serif;
 }
@@ -11,7 +15,7 @@ html{
 
 body{
    margin:0;
-   background:gray;
+   background:#e0e0d1;
 
 }
 .nav {
@@ -61,7 +65,6 @@ body{
     opacity:0;
 }
 #content{
-
     padding: 10px;
     transition: margin-left 0.8s;
     overflow:hidden;
@@ -78,22 +81,13 @@ body{
 
 .container{
 
-   width:100%;
-   text-align:center;
+    display:block;
 }
 
 .container section{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height: 400px;
-    padding: 30px;
-    margin-top: 400px;
-    margin-right:0;
-    background:white;
-    border: 1px solid black;
-}
+    height:400px;
 
+}
 
 section:nth-child(1){
     background: black;
@@ -126,9 +120,26 @@ h1 span{
     font-weight:100;
 }
 
-img{
+.profile img{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+.container .pics img{
+    width: 500px;
+    height: 300px;
+}
+
+.content{
+    display:none;
+
+}
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+    transition:0.8s;
 }
 

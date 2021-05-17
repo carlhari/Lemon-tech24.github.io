@@ -31,108 +31,141 @@
 
         }
 
-        function btn(){
-            document.getElementById('menu').style.width = "0";
-            document.getElementById('content').style.marginLeft= "0";
-            document.getElementById('icon').style.opacity= "1";
+
+        function changePage(target) {
+          const pages = document.querySelectorAll('.pages .page')
+
+          for (let i = 0; i < pages.length; i++) {
+            const page = pages[i]
+            if (page.dataset.content === target) {
+              // shows page
+              page.classList.add('active')
+              continue
+            }
+            // hides page
+            page.classList.remove('active')
+          }
         }
 
+        // default page: page 1
+        changePage('1')
 
   </script>
 
 </head>
 <body>
 
-    <div id = "content">
-        <span class = "slide">
-            <a href="#" onclick="openMenu()">
-                <i id ="icon"class="fas fa-bars"></i>
-            </a>
-        </span>
+            <div id = "content">
+                <span class = "slide">
+                    <a href="#" onclick="openMenu()">
+                        <i id ="icon"class="fas fa-bars"></i>
+                    </a>
+                </span>
 
-        <div id = "menu" class="nav">
-            <a href ="#" class ="close" onclick="closeMenu()">
-                <i id = "close"class="fas fa-times"></i>
-            </a>
-            <div class = "profile">
-                <img src="css/pictures/profile.jpg">
+                <div id = "menu" class="nav">
+                    <a href ="#" class ="close" onclick="closeMenu()">
+                        <i id = "close"class="fas fa-times"></i>
+                    </a>
+                    <div class = "profile">
+                        <img src="css/pictures/profile.jpg">
+                    </div>
+                    <h1>Alisangco, Carl Hari A.</h1>
+
+                    <div class = "type">
+                        <h1>Is a <span class="animate"> </span></h1>
+                    </div>
+
+                        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+                        <script type="text/javascript">
+                              var typed = new Typed('.animate', {
+                                strings:[
+                                 "",
+                                 "DEVELOPER",
+                                 "LOYAL MAN",
+                                 "GAMER",
+                                 "FAITHFUL MAN",
+                                 ],
+                                loop:true,
+                                typeSpeed:150,
+                                backSpeed:50,
+                                smartBackspace:true,
+                              });
+                         </script>
+
+
+                    <a href="#" onclick="changePage('1')"> <i id = "icons" class="fas fa-home"></i>Home</a>
+
+                    <a href="#" onclick="changePage('2')"><i id = "icons" class="fas fa-user"></i>About</a>
+
+                    <a href="#" onclick="changePage('3)"><i id = "icons" class="fas fa-comment"></i>Contact</a>
+
+                </div>
             </div>
-            <h1>Alisangco, Carl Hari A.</h1>
 
-            <div class = "type">
-                <h1>Is a <span class="animate"> </span></h1>
-            </div>
+            <!----- Pages ------>
+            <div class = "pages">
+                <div class="page" data-content ="1">
+                    <div class = "header">
+                        <h1>Title</h1>
+                    </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-                <script type="text/javascript">
-                      var typed = new Typed('.animate', {
-                        strings:[
-                         "",
-                         "DEVELOPER",
-                         "LOYAL MAN",
-                         "GAMER",
-                         "FAITHFUL MAN",
-                         ],
-                        loop:true,
-                        typeSpeed:150,
-                        backSpeed:50,
-                        smartBackspace:true,
-                      });
-                 </script>
+                <!------Pictures/ Parallax----->
+                    <div class="pics">
+                        <img src = "css/pictures/math/pic1.jpg">
+                    </div>
+                    <section>
+                        <h1 data-aos="zoom-in-down">Lorem Ipsum Dolar Sit Amet</h1>
+                        <h1 data-aos="zoom-in">Lorem Ipsum Dolar Sit Amet</h1>
+                    </section>
 
 
-            <a href="#" onclick="btn()"> <i id = "icons" class="fas fa-home"></i>Home</a>
-            <div id = "line"></div>
-            <a href="#" onclick="btn()"><i id = "icons" class="fas fa-user"></i>About</a>
-            <div id = "line"></div>
-            <a href="#" onclick="btn()"><i id = "icons" class="fas fa-comment"></i>Contact</a>
-            <div id = "line"></div>
-        </div>
-    </div>
+                    <section data-aos="flip-up">
+                        <h1 data-aos="flip-up">Lorem Ipsum Dolar Sit Amet</h1>
+                        <h1 data-aos="flip-down">Lorem Ipsum Dolar Sit Amet</h1>
+                    </section>
 
-    <div class = "header">
-        <h1>Title</h1>
-    </div>
+                    <section>
+                        <h1 data-aos="fade-right">Lorem Ipsum Dolar Sit Amet</h1>
+                        <h1 data-aos="flip-left">Lorem Ipsum Dolar Sit Amet</h1>
+                    </section>
 
-    <!------Pictures/ Parallax----->
-    <div class = "container">
-
-        <section>
-            <h1 data-aos="zoom-in-down">Lorem Ipsum Dolar Sit Amet</h1>
-            <h1 data-aos="zoom-in">Lorem Ipsum Dolar Sit Amet</h1>
-        </section>
+                    <section>
+                        <h1 data-aos="fade-down-right">Lorem Ipsum Dolar Sit Amet</h1>
+                        <h1 data-aos="fade-down-left">Lorem Ipsum Dolar Sit Amet</h1>
+                    </section>
 
 
-        <section>
-            <h1 data-aos="flip-up">Lorem Ipsum Dolar Sit Amet</h1>
-            <h1 data-aos="flip-down">Lorem Ipsum Dolar Sit Amet</h1>
-        </section>
+                    <section>
+                        <h1 data-aos="zoom-in-left">Lorem Ipsum Dolar Sit Amet</h1>
+                        <h1 data-aos="zoom-out-left">Lorem Ipsum Dolar Sit Amet</h1>
+                    </section>
 
-        <section>
-            <h1 data-aos="fade-right">Lorem Ipsum Dolar Sit Amet</h1>
-            <h1 data-aos="flip-left">Lorem Ipsum Dolar Sit Amet</h1>
-        </section>
+                    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
-        <section>
-            <h1 data-aos="fade-down-right">Lorem Ipsum Dolar Sit Amet</h1>
-            <h1 data-aos="fade-down-left">Lorem Ipsum Dolar Sit Amet</h1>
-        </section>
+                    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+                    <script>
+                            AOS.init({
+                                duration: 1200,
+                            })
+                        </script>
+                </div>
 
-        <section>
-            <h1 data-aos="zoom-in-left">Lorem Ipsum Dolar Sit Amet</h1>
-            <h1 data-aos="zoom-out-left">Lorem Ipsum Dolar Sit Amet</h1>
-        </section>
+                <!---- Page 2 ---->
+                <div class = "page" data-content="2">
+                    <div class = "main-wrapper"></div>
+                   <div class = "profile-home">
+                                <img src="css/pictures/profile.jpg">
+                   </div>
 
-         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+                </div>
 
-         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                <!---- Page 3 ---->
 
-            <script>
-                AOS.init({
-                    duration: 1200,
-                })
-            </script>
+                <div class = "page" data-content="3">
+
+                    Page 3
+                </div>
     </div>
 </body>
 </html>
