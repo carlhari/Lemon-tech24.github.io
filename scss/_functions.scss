@@ -1,0 +1,16 @@
+// -- get breakpoint
+@function size($key) {
+  @return map-get($map: $breakpoints, $key: $key);
+}
+
+// -- responsive minWidth
+@mixin minWidth($key) {
+  @media (min-width: size($key)) {
+    @content;
+  }
+}
+
+// -- get color
+@function color($key) {
+  @return map-get($map: $colors, $key: $key);
+}
