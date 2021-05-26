@@ -298,13 +298,17 @@ section{
     font-size: 1.5rem;
     div{
         border-radius:30px;
-        background:rgb(102, 204, 255, .4);
+        background:black;
+        opacity:.7;
         text-align:center;
         padding: 15px;
-        font-weight:410rem;
+        z-index:-1;
+        h1{
 
+            border: 2px solid white;
+        }
         p{
-
+         opacity:1;
          text-align:justify;
         }
     }
