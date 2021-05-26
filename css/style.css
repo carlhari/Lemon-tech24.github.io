@@ -345,25 +345,4 @@ section:nth-of-type(1) {
   margin: 0;
 }
 
-.fb {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.fb a {
-  text-align: center;
-  font-size: 70px;
-  padding: 5px;
-}
-.fb a i {
-  padding: 5px;
-  color: white;
-  border-radius: 50%;
-}
-.fb a i:hover {
-  color: black;
-  background: white;
-}
-
 /*# sourceMappingURL=style.css.map */
