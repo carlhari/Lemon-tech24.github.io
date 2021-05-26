@@ -9,121 +9,120 @@
   }
 }
 
-@media screen and(max-width: 370px){
 
-        .homepage{
-            padding:3rem;
 
-        }
 
-        section div{
-            font-size:10px;
-        }
+@media screen and(max-width: 1200px){
+
 
         .wrap-acts{
-              .splide{
+                          .splide{
 
-                    .splide__track{
+                                .splide__track{
 
-                        .splide__list{
+                                    .splide__list{
+                                          font-size:20px;
+                                        li{
+                                            margin:30px auto;
+                                            padding: 7px;
+                                             background:none;
 
-                              font-size:10px;
-                            li{
-                                margin:45px auto;
-                                padding: 7px;
-                                 background:none;
+
+                                            img{
+                                                width: 100%;
+                                                height: 500px;
+                                                padding: 10px;
+
+                                            }
+                                        }
+                                    }
+                                }
+                          }
+                    }
+            }
 
 
-                                img{
-                                    width: 100%;
-                                    height: 300px;
-                                    padding: 10px;
+    @media screen and(max-width: 700px){
 
+            .homepage{
+                padding:3rem;
+
+            }
+
+            section div{
+                font-size:20px;
+            }
+            .container-head{
+                        font-size: 30px;
+                    }
+             .wrap-acts{
+                          .splide{
+
+                                .splide__track{
+
+                                    .splide__list{
+                                          font-size:12px;
+                                        li{
+                                            margin:45px auto;
+                                            padding: 7px;
+                                             background:none;
+
+
+                                            img{
+                                                width: 100%;
+                                                height: 300px;
+                                                padding: 10px;
+
+                                            }
+                                        }
+                                    }
+                                }
+                          }
+                    }
+            }
+
+            @media screen and(max-width: 480px){
+
+                    .homepage{
+                        padding:15px;
+
+                    }
+
+                    section div{
+                        font-size:15px;
+                    }
+                    .container-head{
+                        font-size: 30px;
+                    }
+
+
+            .wrap-acts{
+                  .splide{
+
+                        .splide__track{
+
+                            .splide__list{
+
+                                  font-size:15px;
+                                li{
+                                    margin:45px auto;
+                                    padding: 7px;
+                                     background:none;
+
+
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                        padding: 10px;
+
+                                    }
                                 }
                             }
                         }
-                    }
-              }
-        }
-}
+                  }
+            }
 
-
-@media screen and(max-width: 480px){
-
-        .homepage{
-            padding:3rem;
-
-        }
-
-        section div{
-            font-size:10px;
-        }
-
-        .wrap-acts{
-              .splide{
-
-                    .splide__track{
-
-                        .splide__list{
-
-                              font-size:12px;
-                            li{
-                                margin:45px auto;
-                                padding: 7px;
-                                 background:none;
-
-
-                                img{
-                                    width: 100%;
-                                    height: 300px;
-                                    padding: 10px;
-
-                                }
-                            }
-                        }
-                    }
-              }
-        }
-}
-
-
-@media screen and(max-width: 700px){
-
-        .homepage{
-            padding:3rem;
-
-        }
-
-        section div{
-            font-size:10px;
-        }
-
-        .wrap-acts{
-              .splide{
-
-                    .splide__track{
-
-                        .splide__list{
-
-                              font-size:15px;
-                            li{
-                                margin:45px auto;
-                                padding: 7px;
-                                 background:none;
-
-
-                                img{
-                                    width: 100%;
-                                    height: 300px;
-                                    padding: 10px;
-
-                                }
-                            }
-                        }
-                    }
-              }
-        }
-}
+    }
 
 html,
 body {
@@ -314,7 +313,6 @@ section{
 
 
 section:nth-of-type(1){
-
     animation: bg linear infinite;
     animation-iterate-count:infinite;
     animation-duration:7s;
@@ -366,7 +364,15 @@ section:nth-of-type(1){
 
                  margin:0;
 
+                h4{
+                    text-align:center;
+                }
 
+                div{
+
+                    text-align:center;
+
+                }
                 img{
                     width: 700px;
                     height: 400px;
@@ -400,5 +406,36 @@ section:nth-of-type(1){
    }
 
 
+}
+
+
+.content-video{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        .inside-video{
+            margin:20px auto;
+            width: 1000px;
+            height: 600px;
+            padding: 20px;
+            border-radius: 30px;
+            animation: change-color linear infinite;
+            animation-duration:10s;
+            video{
+                border-radius: 10px;
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+}
+.container-head{
+    text-align:center;
+    font-weight: bold;
+    font-size: 50px;
+        p{
+            margin: 0;
+        }
 }
 
