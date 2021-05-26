@@ -442,4 +442,24 @@ section:nth-of-type(1){
             margin: 0;
         }
 }
+.fb{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    a{
+        text-align: center;
+        font-size: 70px;
+        padding: 5px;
+        i{
+            padding: 5px;
+            color:white;
+            border-radius:50%;
+        }
 
+        i:hover{
+            color:black;
+            background:white;
+        }
+    }
+}
