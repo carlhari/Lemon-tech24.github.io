@@ -4,7 +4,7 @@ const container = document.querySelector('.side-nav')
 const anchors = container.querySelectorAll('a')
 const header = document.querySelector('header')
 const span = document.querySelectorAll('span')
-
+const emailForm = document.querySelector('#email-form')
 
 //change color on  scroll
 window.onscroll = () => {
@@ -46,3 +46,23 @@ if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
 }
 
+emailjs.init("57KNmk21agGBbv-j1")
+
+emailForm.addEventListener('submit', e => {
+  e.preventDefault()
+
+  const email = emailForm.email.value.trim()
+  const message = emailForm.message.value.trim()
+
+  if (!email || !message) return alert('missing input')
+
+  const payload = { from_name: email, to_name: 'Carl', message }
+
+  emailjs
+      .send('service_83wdyuk', 'template_scf4t89', payload)
+      .then(() => alert('Send successfully'))
+      .catch(console.error)
+
+  emailForm.email.value = ''
+  emailForm.message.value = ''
+})

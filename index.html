@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href ="style.css">
-
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        defer></script>
     <script src="main.js" defer></script>
     <title>Portfolio | Alisangco</title>
-   
 </head>
+
 <body>
     <nav>
-   
+
         <header>Carl Hari</header>
 
         <ul class="items">
-            <li><a href="#section-1" >Home</a></li>
+            <li><a href="#section-1">Home</a></li>
             <li><a href="#section-2">About</a></li>
             <li><a href="#section-3">Projects</a></li>
             <li><a href="#section-4">Contact</a></li>
         </ul>
-        
+
         <div class="toggle">
             <span></span>
             <span></span>
@@ -38,74 +40,42 @@
         </ul>
     </div>
 
-
     <section class="section-1" id="section-1">
         <p class="intro-txt">Hello I'm Alisangco, Carl Hari A.<br>Inspiring Fullstack Developer</p>
     </section>
-<!-------------------------------------------------------------------->
+    <!-------------------------------------------------------------------->
     <section class="section-2" id="section-2">
-            <p>LOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEM</p>     
+        <p>LOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEM</p>
     </section>
-<!-------------------------------------------------------------------->
+    <!-------------------------------------------------------------------->
     <section class="section-3" id="section-3">
-            <div class="project-1">
-                This is project 1
-            </div>
+        <div class="project-1">
+            This is project 1
+        </div>
 
-            <div class="project-2">
-                This is project 2
-            </div>
-            <div class="project-3">
-                This is project 3
-            </div>
+        <div class="project-2">
+            This is project 2
+        </div>
+        <div class="project-3">
+            This is project 3
+        </div>
     </section>
-<!-------------------------------------------------------------------->
+    <!-------------------------------------------------------------------->
     <section class="section-4" id="section-4">
-           
-                <input class = "email" type="text" placeholder="Type your Email."><br>
-                <textarea class = "msg" type ="text" placeholder="Message Here."></textarea>
-                <button class = "btn-submit"type="submit" onclick="sendMsg()" >Send</button>
-            
-
-            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-            <script type="text/javascript">
-               
-                
-                
-                (function(){
-                    emailjs.init("57KNmk21agGBbv-j1");
-                })();
-            
-             
-                
-                const email = document.querySelector('.email')
-                    const msg = document.querySelector('.msg')
-
-                    function sendMsg(params){
-                        var tempParams= {
-                            from_name: email.value,
-                            to_name:'Carl',
-                            message: msg.value
-                        };
-                        msg.value=''
-                        email.value=''
-                        emailjs.send('service_83wdyuk','template_scf4t89',tempParams).then(alert('Send successfully'))
-                    }
-
-
-                   
-
-            </script>
+        <form id="email-form">
+            <input name="email" type="email" placeholder="Type your Email."><br>
+            <textarea name="message" type="text" placeholder="Message Here."></textarea>
+            <button class="btn-submit" type="submit">Send</button>
+        </form>
     </section>
 
     <!---- api password: D8238D6AC103EE510C3E90A50796B72B67C0 --->
     <!---- Security Token: 1bd593d9-c1f3-4867-9f7c-bd29ec16bd37 --->
 
-
-    
-<!-------------------------------------------------------------------->
+    <!-------------------------------------------------------------------->
+    <section class="footer">
+        @Copyright Reserved 2022 | Alisangco, Carl Hari A.
+    </section>
 </body>
-<section class = "footer">
-    @Copyright Reserved 2022 | Alisangco, Carl Hari A.
-</section>
+
 </html>
