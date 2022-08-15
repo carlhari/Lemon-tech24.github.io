@@ -61,11 +61,11 @@
     </section>
 <!-------------------------------------------------------------------->
     <section class="section-4" id="section-4">
-            <form method="post">
+           
                 <input class = "email" type="text" placeholder="Type your Email."><br>
                 <textarea class = "msg" type ="text" placeholder="Message Here."></textarea>
                 <button class = "btn-submit"type="submit" onclick="sendMsg()" >Submit</button>
-            </form>
+            
 
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
             <script type="text/javascript">
@@ -76,9 +76,9 @@
                     emailjs.init("57KNmk21agGBbv-j1");
                 })();
             
-                form.addEventListener('submit', e => {
-                e.preventDefault()
-                    const email = document.querySelector('.email')
+             
+                
+                const email = document.querySelector('.email')
                     const msg = document.querySelector('.msg')
 
                     function sendMsg(params){
@@ -94,8 +94,6 @@
 
                     msg.value=''
                     email.value=''
-                })
-                
 
             </script>
     </section>
