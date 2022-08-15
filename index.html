@@ -78,24 +78,24 @@
             
                 form.addEventListener('submit', e => {
                 e.preventDefault()
-                
+                    const email = document.querySelector('.email')
+                    const msg = document.querySelector('.msg')
+
+                    function sendMsg(params){
+                        var tempParams= {
+                            from_name: email.value,
+                            to_name:'Carl',
+                            message: msg.value
+                        };
+
+                        emailjs.send('service_83wdyuk','template_scf4t89',tempParams).then(alert('Send successfully'))
+                    }
+
+
+                    msg.value=''
+                    email.value=''
                 })
-                const email = document.querySelector('.email')
-                const msg = document.querySelector('.msg')
                 
-                function sendMsg(params){
-                    var tempParams= {
-                        from_name: email.value,
-                        to_name:'Carl',
-                        message: msg.value
-                    };
-
-                    emailjs.send('service_83wdyuk','template_scf4t89',tempParams).then(alert('Send successfully'))
-                }
-               
-
-                msg.value=''
-                email.value=''
 
             </script>
     </section>
