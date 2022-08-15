@@ -5,20 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href ="style.css">
-    <link rel="icon" href="assets/pic.ico">
+
     <script src="main.js" defer></script>
     <title>Portfolio | Alisangco</title>
+   
 </head>
 <body>
     <nav>
-        <div class="title" style="color:white">WTW</div>
-
+   
+        <header>Carl Hari</header>
 
         <ul class="items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#section-1" >Home</a></li>
+            <li><a href="#section-2">About</a></li>
+            <li><a href="#section-3">Projects</a></li>
+            <li><a href="#section-4">Contact</a></li>
         </ul>
         
         <div class="toggle">
@@ -29,14 +30,81 @@
     </nav>
 
     <div class="side-nav">
-        <ul class="items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+        <ul>
+            <li><a href="#section-" class="side-nav-items">Home</a></li>
+            <li><a href="#section-2" class="side-nav-items">About</a></li>
+            <li><a href="#section-3" class="side-nav-items">Projects</a></li>
+            <li><a href="#section-4" class="side-nav-items">Contact</a></li>
         </ul>
     </div>
 
-</body>
 
+    <section class="section-1" id="section-1">
+        <p class="intro-txt">Hello I'm Alisangco, Carl Hari A.<br>Inspiring Fullstack Developer</p>
+    </section>
+<!-------------------------------------------------------------------->
+    <section class="section-2" id="section-2">
+            <p>LOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEMLOREM LOEM</p>     
+    </section>
+<!-------------------------------------------------------------------->
+    <section class="section-3" id="section-3">
+            <div class="project-1">
+                This is project 1
+            </div>
+
+            <div class="project-2">
+                This is project 2
+            </div>
+            <div class="project-3">
+                This is project 3
+            </div>
+    </section>
+<!-------------------------------------------------------------------->
+    <section class="section-4" id="section-4">
+            <form method="post">
+                <input class = "email" type="text" placeholder="Type your Email."><br>
+                <textarea class = "msg" type ="text" placeholder="Message Here."></textarea>
+                <button class = "btn-submit"type="submit" onclick="sendMsg()" >Submit</button>
+            </form>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+            <script type="text/javascript">
+               
+                
+                
+                (function(){
+                    emailjs.init("57KNmk21agGBbv-j1");
+                })();
+
+
+                const email = document.querySelector('.email')
+                const msg = document.querySelector('.msg')
+                
+                function sendMsg(params){
+                    var tempParams= {
+                        from_name: email.value,
+                        to_name:'Carl',
+                        message: msg.value
+                    };
+
+                    emailjs.send('service_83wdyuk','template_scf4t89',tempParams).then(alert('Send successfully'))
+                }
+               
+
+                msg.value=''
+                email.value=''
+
+            </script>
+    </section>
+
+    <!---- api password: D8238D6AC103EE510C3E90A50796B72B67C0 --->
+    <!---- Security Token: 1bd593d9-c1f3-4867-9f7c-bd29ec16bd37 --->
+
+
+    
+<!-------------------------------------------------------------------->
+</body>
+<section class = "footer">
+    @Copyright Reserved 2022 | Alisangco, Carl Hari A.
+</section>
 </html>

@@ -1,7 +1,13 @@
+:root{
+    --green:#94B49F;
+    --brown:#FCF8E8;
+}
+
 *{
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
+ 
 }
 
 html, body{
@@ -11,6 +17,7 @@ html, body{
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index:5;
 }
 
 ul {
@@ -22,16 +29,30 @@ nav {
     position: sticky;
     top:0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 3rem;
     z-index: 3;
-    background-color:violet;
+    font-size:1.25rem;
+    background-color: var(--brown);
+
 }
 
-.title{
-    font-size: 1.25rem;
+.nav-active{
+    transition: .9s ease;  
+    background-color: var(--green);
+ 
+}
+
+header{
+    font-size: 1.7rem;
     font-weight: 600;
+    color:var(--green)
+}
+
+
+.title-active{
+    color:var(--brown)
 }
 
 .toggle, span{
@@ -45,29 +66,138 @@ nav ul li{
 
 nav ul li a{
     margin-left: 1rem;
-    color:black;
+    color:var(--green);
 }
+
+
 
 .side-nav {
     display: none;
 }
 
+.side-nav {
+    position: fixed;
+    display: none;
+    place-items: center;
+    left: -100%;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    transition: left .555s;
+    position: fixed;
+    background-color: var(--brown);
+ 
+}
 
-/* Mobile */
+.side-nav ul li a{
+    color:var(--green)
+}
 
-@media(max-width: 500px) {
+section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    height:80vh;
+    text-align: justify;
+    background-color: #FCF8E8;
+    border-top:1px solid var(--green)
+
+}
+
+
+/*End of Navigation*/
+
+/* Content */
+.section-1{
+    background-image: url("./assets/profile.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height:90vh;
+
+}
+
+.intro-txt{
+   font-size: 1.5rem;
+   font-weight: 600;
+   text-align: center;
+   color:var(--brown)
+}
+
+.section-3{
+    justify-content: space-evenly;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-1,.project-2, .project-3{
+  
+   padding:1.5rem;
+   background-color: white;
+   box-shadow: 2px 1px grey;
+   border-radius: 2rem;
+
+}
+
+.section-4 form{
+    display:inline-block;
+
+}
+
+.email, .msg{
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+}
+
+.msg{
+    height: 20vh;
+    width: 30vh;
+}
+
+
+
+
+
+/* End of content*/
+
+.footer{
+    height:10vh;
+    font-size: .8em;   
+    color:var(--brown);
+    background-color: var(--green);
+}
+
+
+
+
+
+/* Mobile Version */
+
+@media(max-width: 590px) {
     .toggle{
         display: block;
+        padding-left:3rem;
     }
     
+    
+    
     .toggle span{
-        background: black;
+        background:var(--green);
         width: 20px;
         height: 3px;
         display: block;
         margin:2px;
         transition: .4s;
     }
+
+    .toggle .span-active{
+        background: var(--brown);
+    }
+
+  
     .toggle span:nth-child(1){
         margin-left: 6.5px;
         width: 15px;
@@ -97,22 +227,9 @@ nav ul li a{
         display:none;
     }
 
-    .side-nav {
-        position: fixed;
-        display: grid;
-        place-items: center;
-        left: -100%;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        text-align: center;
-        overflow: hidden;
-        transition: left .555s;
-        background-color: rgb(230, 224, 224);
-       
+    .side-nav{
+        display:grid;
     }
-
- 
     
     .side-nav ul li{
         margin: 30px 0;
