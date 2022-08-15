@@ -75,8 +75,11 @@
                 (function(){
                     emailjs.init("57KNmk21agGBbv-j1");
                 })();
-
-
+            
+                form.addEventListener('submit', e => {
+                e.preventDefault()
+                
+                })
                 const email = document.querySelector('.email')
                 const msg = document.querySelector('.msg')
                 
