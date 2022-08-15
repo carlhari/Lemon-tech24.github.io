@@ -145,7 +145,9 @@ section{
     display:inline-block;
 
 }
-
+.btn-submit{
+    border-radius:1.2rem;
+}
 .email, .msg{
     padding: 1rem;
     border-radius: 1.5rem;
