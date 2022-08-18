@@ -142,21 +142,28 @@ section{
 }
 
 .section-4 form{
-    display:inline-block;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
 
 }
 .btn-submit{
+    margin:5px;
     border-radius:1.2rem;
+    font-size: 20px;
 }
 .email, .msg{
-    padding: 1rem;
+    padding: 15px;
     border-radius: 1.5rem;
 
 }
 
 .msg{
-    height: 20vh;
-    width: 30vh;
+    overflow-y:hidden;
+    height: 50vh;
+    width: 50vh;
+    resize:none;
+    font-size: 13px;
 }
 
 
