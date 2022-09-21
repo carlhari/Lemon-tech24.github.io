@@ -22,6 +22,7 @@ window.onscroll = () => {
         for (const a of document.querySelectorAll('a')) {a.style.color = '#94B49F'}
     
       }
+
 }
 
 //toggle = the cross or spans
@@ -34,7 +35,7 @@ toggleBtn.addEventListener('click', function () {
 })
 
 
-
+//close the side-nav when anchors clicked
 for (const anchor of anchors) {
   anchor.addEventListener('click', () => {
     container.classList.remove('active')
@@ -42,6 +43,8 @@ for (const anchor of anchors) {
   })
 }
 
+
+// To remove confirm resubmition
 if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
 }

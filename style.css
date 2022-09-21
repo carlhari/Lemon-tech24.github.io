@@ -33,7 +33,7 @@ nav {
     align-items: center;
     padding: 1rem 3rem;
     z-index: 3;
-    font-size:1.25rem;
+    
     background-color: var(--brown);
 
 }
@@ -61,13 +61,20 @@ header{
 
 
 nav ul li{
-    display: inline-block
+    display: inline-block;
+    margin-left: 1.25rem;
 }
 
 nav ul li a{
-    margin-left: 1rem;
+   
     color:var(--green);
+    font-size:1.25rem;
 }
+
+a:hover{
+    font-weight: 700;
+}
+
 
 
 
@@ -103,7 +110,7 @@ section{
     height:80vh;
     text-align: justify;
     background-color: #FCF8E8;
-    border-top:1px solid var(--green)
+   
 
 }
 
@@ -115,8 +122,7 @@ section{
     background-image: url("./assets/profile.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height:90vh;
-
+ 
 }
 
 .intro-txt{
@@ -247,4 +253,11 @@ section{
     .side-nav.active {
         left: 0;
     }
+
+
+    /* image */
+   .section-1{
+    background-size: contain;
+
+   }
 }
