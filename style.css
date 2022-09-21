@@ -110,7 +110,7 @@ section{
     height:80vh;
     text-align: justify;
     background-color: #FCF8E8;
-    border-top: solid 1px var(--green);
+
 
 }
 
@@ -122,7 +122,7 @@ section{
     background-image: url("./assets/profile.jpg");
     background-size:cover;
     background-repeat: no-repeat;
- 
+   
 }
 
 .intro-txt{
